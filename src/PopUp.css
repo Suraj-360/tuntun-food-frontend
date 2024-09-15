@@ -1,0 +1,141 @@
+/* PopUp.css */
+
+.pop-up-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.pop-up-modal {
+    position: fixed;
+    z-index: 1001;
+    top: calc(50% - 1rem);
+    left: calc(50% - 1rem);
+    min-width: 320px;
+    min-height: 200px;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    background: white;
+    display: flex;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    max-width: calc(100% - 2rem);
+    max-height: calc(100% - 2rem);
+}
+
+.pop-up-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.pop-up-btn {
+    width: 150px;
+    height: 55px;
+    padding: 1rem 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    border: none;
+    border-radius: 0.25rem;
+}
+
+.pop-up-btn.green {
+    background-color: green;
+    color: white;
+}
+
+.pop-up-btn.red {
+    background-color: red;
+    color: white;
+}
+
+.pop-up-btn:hover {
+    transform: scale(1.05);
+}
+
+.pop-up-btn.green:hover {
+    background-color: darkgreen;
+}
+
+.pop-up-btn.red:hover {
+    background-color: darkred;
+}
+
+.pop-up-btn-svg {
+    width: 18px;
+    height: auto;
+    margin-right: 0.5rem;
+}
+
+
+/* PopUp.css */
+.pop-up-btn-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.pop-up-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.pop-up-btn.red {
+    background-color: #f44336;
+    color: #ffffff;
+}
+
+.pop-up-btn.green {
+    background-color: #4caf50;
+    color: #ffffff;
+}
+
+.pop-up-btn.green.loader-popup {
+    background-color: #8bc34a; /* Change color when loading if needed */
+    cursor: not-allowed;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader-popup {
+    width: 50px;
+    --b: 8px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    padding: 1px;
+    background: conic-gradient(#0000 10%, #ffffff) content-box;
+    -webkit-mask:
+        repeating-conic-gradient(#0000 0deg, #000 1deg 20deg, #0000 21deg 36deg),
+        radial-gradient(farthest-side, #0000 calc(100% - var(--b) - 1px), #000 calc(100% - var(--b)));
+    -webkit-mask-composite: destination-in;
+    mask-composite: intersect;
+    animation: l4 1s infinite steps(10);
+}
+
+@keyframes l4 {
+    to {
+        transform: rotate(1turn)
+    }
+}

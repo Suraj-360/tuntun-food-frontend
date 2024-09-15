@@ -1,0 +1,66 @@
+/* VerificationError.css */
+.error-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+  }
+  
+  .content {
+    text-align: center;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .error-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+  }
+  
+  h1 {
+    color: #ff4d4d;
+    font-size: 24px;
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 1.5rem;
+  }
+  
+  button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0.5rem;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    color: #fff;
+  }
+
+  .resend-button:hover{
+    background: none;
+    /* background-image: linear-gradient(to right, #D31027 0%, #EA384D 51%, #D31027 100%); */
+    background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 51%, #DA22FF 100%);
+    color: #fff;
+  }
+
+  .home-button:hover{
+    background: none;
+    background-image: linear-gradient(to right, #D31027 0%, #EA384D 51%, #D31027 100%);
+    color: #fff;
+  }
+  
+  footer {
+    margin-top: 2rem;
+    font-size: 14px;
+    color: #777;
+  }
+  
+  

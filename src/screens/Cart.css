@@ -1,0 +1,245 @@
+/* General Styles */
+.cart-container {
+    width: 100%;
+    max-width: 1200px; /* Limit container width for better readability */
+    margin: auto; /* Center container */
+    display: flex;
+    flex-direction: column;
+    padding: 20px; /* Add padding for better spacing */
+    box-sizing: border-box;
+}
+
+.cart-svg-in-cart-container {
+    width: 150px;
+    height: auto;
+    margin: 3rem auto; /* Center SVG and adjust margin */
+}
+
+.empty-cart {
+    color: #999; /* Use a lighter gray for a more professional look */
+    text-align: center; /* Center align text */
+    font-size: 1.5rem; /* Increase font size for emphasis */
+}
+
+.cart-container hr {
+    border: none;
+    height: 1px;
+    background-color: #ddd; /* Lighter gray line */
+    margin: 20px 0; /* Add margin for spacing */
+}
+
+/* Table Styles */
+.cart-container table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    overflow: hidden;
+}
+
+.cart-container table thead {
+    background-color: #f4f4f4; /* Subtle background color */
+}
+
+.cart-container table th {
+    font-size: 16px;
+    padding: 12px;
+    text-align: center;
+    border-bottom: 2px solid #ddd; /* Subtle border for headers */
+}
+
+.cart-container table tbody {
+    overflow-y: auto;
+    max-height: 400px; /* Limit height for scrollable tbody */
+}
+
+.cart-container table td {
+    padding: 12px;
+    background-color: #fff; /* White background for better contrast */
+    text-align: center;
+    border-bottom: 1px solid #ddd; /* Subtle border for rows */
+}
+
+.cart-container table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternating row colors */
+}
+
+/* Quantity Button Styles */
+.cart-quantity-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between buttons and quantity */
+}
+
+.cart-btns {
+    cursor: pointer;
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 5px 10px; /* Padding for buttons */
+    background-color: #f1f1f1; /* Light background for buttons */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-btns:hover {
+    background-color: #e1e1e1; /* Slightly darker on hover */
+}
+
+.cart-btns:active {
+    background-color: #d1d1d1; /* Darker on click */
+}
+
+.dec-cart-svg, .inc-cart-svg {
+    width: 1rem;
+    color: blue;
+}
+
+.remove-cart-svg {
+    width: 1.4rem;
+    color: #e74c3c; /* Red color for remove icon */
+}
+
+/* Cart Info and Buttons */
+.cart-info-container {
+    display: flex;
+    justify-content: space-between; /* Adjust spacing between elements */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    margin-top: 5px; /* Add margin for spacing */
+}
+
+.summary {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.summary div {
+    font-size: 16px;
+}
+
+.payment-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Primary Button - Checkout */
+.checkout-btn {
+    background-color: #007bff; /* Primary blue */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 4px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.checkout-btn:hover {
+    background-color: #0056b3; /* Darker blue */
+}
+
+.checkout-btn:focus {
+    border-color: #003d7a;
+    box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.5);
+    outline: none;
+}
+
+/* Secondary Button - Delivery */
+.btn-delivery {
+    background-color: #6c757d; /* Secondary gray */
+    border: 1px solid #6c757d;
+    border-radius: 4px;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-delivery:hover {
+    background-color: #5a6268; /* Slightly darker gray */
+}
+
+.btn-delivery:focus {
+    border-color: #4e555b;
+    box-shadow: 0 0 0 3px rgba(108, 117, 125, 0.5);
+    outline: none;
+}
+
+/* Remove Item Button */
+.cart-btns.cart-remove-item {
+    background: none; /* No background for icon button */
+    border: none; /* No border */
+    padding: 0; /* No padding */
+    cursor: pointer; /* Pointer cursor for click */
+}
+
+.cart-btns.cart-remove-item:hover {
+    background-color: #f8d7da; /* Light red background on hover */
+}
+
+.cart-btns.cart-remove-item:active {
+    background-color: #f5c6cb; /* Darker red on click */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 850px) {
+    .cart-container table th,
+    .cart-container table td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .cart-quantity-btn {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .cart-container table td {
+        font-size: 13px;
+        padding: 6px;
+    }
+
+    .cart-btns.cart-remove-item {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .cart-container table th {
+        font-size: 12px;
+    }
+
+    .cart-btns {
+        font-size: 0.8rem;
+    }
+
+    .cart-info-container {
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .cart-container {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    .cart-container table th {
+        font-size: 11px;
+    }
+
+    .cart-btns {
+        padding: 4px;
+        font-size: 0.7rem;
+    }
+}

@@ -1,0 +1,233 @@
+.profile-main-container {
+    width: 100%;
+    height: 87vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.profile-nav-list {
+    width: 5%;
+    min-height: 87vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding-top: 50px;
+    gap: 0.1rem;
+    box-sizing: border-box;
+    border-right: 5px solid #ff5e00;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all 0.6s ease-out;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
+
+.profile-nav-list h2 {
+    width: 100%;
+    padding: 0.2rem 0.4rem;
+    color: transparent;
+    text-align: center;
+}
+
+.profile-nav-list:hover {
+    width: 370px;
+}
+
+.profile-nav-list:hover .profile-set-and-get-area {
+    width: calc(100% - 5%);
+}
+
+.profile-set-and-get-area {
+    width: calc(100% - 60px);
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 10px;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    box-sizing: border-box;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.profile-set-and-get-area.show {
+    transform: translateX(0%);
+}
+
+.profile-set-and-get-area.hide {
+    transform: translateX(100%);
+}
+
+.profile-nav-list .profile-picture {
+    width: 68%;
+    aspect-ratio: 1/1;
+    border-radius: 101%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-nav-list .profile-picture img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 2px solid #ff5e00;;
+}
+
+.profiles-options {
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.profiles-options ul {
+    width: 100%;
+    height: auto;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.1rem;
+}
+
+.profiles-options ul li {
+    width: 100%;
+    padding: 0.4rem 1.1rem;
+    background-color: #007BFF;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 15px;
+    position: relative;
+}
+
+.profiles-options ul li:hover {
+    background-color: #0056b3;
+    transform: scale(1.03);
+}
+
+.profiles-options ul li:active {
+    background-color: #023974;
+    transform: scale(0.98);
+}
+
+.profiles-options ul li:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Hover effect on profile-nav-list */
+.profile-nav-list:hover .profiles-options ul li::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+}
+
+/* Different text for each li on hover */
+.profile-nav-list:hover .profiles-options ul li:nth-child(1)::after {
+    content: "Account Information";
+}
+
+.profile-nav-list:hover .profiles-options ul li:nth-child(2)::after {
+    content: "Personal Information";
+}
+
+.profile-nav-list:hover .profiles-options ul li:nth-child(3)::after {
+    content: "Account Management";
+}
+
+.profile-nav-list:hover .profiles-options ul li:nth-child(4)::after {
+    content: "Help & Support";
+}
+
+/* Hide the original text on hover */
+.profile-nav-list:hover .profiles-options ul li {
+    color: transparent;
+}
+
+.profile-nav-list:hover h2 {
+    color: rgb(255, 255, 255);
+}
+
+@media  screen and (max-width:1190px) {
+
+    .profile-nav-list {
+        width: 8%;
+    }
+
+    .profile-set-and-get-area{
+        width: 92%;
+    }
+    .profile-nav-list:hover {
+        width: 92%;
+    }
+    
+    .profile-nav-list:hover .profile-set-and-get-area {
+        width: 8%;
+    }
+}
+
+@media  screen and (max-width:660px) {
+
+    .profile-nav-list {
+        width: 15%;
+    }
+
+    .profile-set-and-get-area{
+        width: 85%;
+    }
+    .profile-nav-list:hover {
+        width: 85%;
+    }
+    
+    .profile-nav-list:hover .profile-set-and-get-area {
+        width: 15%;
+    }
+}
+
+@media  screen and (max-width:420px) {
+
+    .profile-nav-list {
+        width: 15%;
+    }
+
+    .profile-set-and-get-area{
+        width: 85%;
+    }
+    .profile-nav-list:hover {
+        width: 85%;
+    }
+    
+    .profile-nav-list:hover .profile-set-and-get-area {
+        width: 15%;
+    }
+}
+
+@media  screen and (max-width:400px) {
+
+    .profile-nav-list .profiles-options ul li {
+        display: flex;
+        text-align: center;
+        height: 60px;
+
+    }
+}

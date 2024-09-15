@@ -1,0 +1,162 @@
+.about-us {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-us-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.about-us-header h1 {
+  font-size: 2.5rem;
+  color: rgb(9, 9, 134);
+  font-family: "Matemasie", sans-serif;
+  font-weight: 300;
+}
+
+.about-us-header p {
+  font-size: 1.2rem;
+  color: #777;
+}
+
+.about-us-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.about-us-text {
+  flex: 1;
+}
+
+.about-us-text h2 {
+  font-size: 2rem;
+  color: #444;
+  margin-bottom: 1rem;
+  font-family: "DM Serif Text", serif;
+}
+
+.about-us-text p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  text-align: justify;
+}
+
+.about-us-text ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #555;
+}
+
+.about-us-text li {
+  margin-bottom: 0.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.about-us-image {
+  flex: 1;
+  text-align: center;
+}
+
+.about-us-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.cards-container-about-us {
+  max-width: 1200px; /* Maximum width of the container */
+  display: flex; /* Use Flexbox for layout */
+  flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+  justify-content: center; /* Center items horizontally */
+  gap: 1.5rem; /* Space between cards */
+  margin: 1rem auto; /* Center container horizontally and add vertical margin */
+  background-image: linear-gradient( 135deg, #81FFEF 10%, #F067B4 100%);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-sizing: border-box;
+}
+
+.card-about-us {
+  width: 380px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: whitesmoke;
+  border-radius: 1rem;
+  padding: 14px;
+  position: relative; /* Needed for positioning the pseudo-element */
+  overflow: hidden;  /* Ensures the pseudo-element doesn't overflow */
+}
+
+.card-about-us::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px; /* Border height */
+  background-color: #003dd7; /* Border color */
+  transition: width 0.4s ease; /* Animation duration and easing */
+}
+
+.card-about-us:hover::after {
+  width: 100%; /* Full width on hover */
+}
+
+.card-about-us p {
+  font-family: 'Raleway', sans-serif;
+  text-align: justify;
+  font-size: 15px;
+  line-height: 1.2rem;
+}
+
+.card-about-us h4 {
+  font-family: "DM Serif Text", serif;
+}
+
+.card-about-us img {
+  width: 120px;
+  height: auto;
+  margin-left: 1rem;
+}
+
+.zigzag {
+  width: 100%;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.zigzag-container {
+  display: inline-block;
+  width: 100%;
+}
+
+.zigzag-container svg {
+  width: 300px;
+  height: auto;
+}
+
+@media screen and (max-width:867px) {
+  .about-us-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width:400px){ 
+  .card-about-us{
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
+  .card-about-us h4{
+    text-align: right;
+  }
+}

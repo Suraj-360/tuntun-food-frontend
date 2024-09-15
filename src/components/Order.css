@@ -1,0 +1,224 @@
+.order-model-details-container {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.order-histroy-details-container {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.order-histroy-table-container h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.order-histroy-table-container table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.order-histroy-table-container table thead,
+.order-histroy-table-container table th {
+  background-color: #f0f0f0;
+  font-size: 14px;
+  padding: 10px 1rem;
+  text-align: center;
+  box-sizing: border-box;
+  color: #333;
+}
+
+.order-histroy-table-container table tbody {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.order-histroy-table-container table td {
+  padding: 10px 1rem;
+  background-color: rgb(248, 248, 248);
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  font-size: 14px;
+  color: #555;
+}
+
+
+/* Simplified hover effect */
+.order-histroy-table-container table tbody tr {
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add a smooth transition */
+}
+
+.order-histroy-table-container table tbody tr:hover {
+  background-color: #8e3c3c; /* Change background on hover */
+  color: #fff; /* Change text color on hover */
+}
+
+.delivery-status-order-history {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 20px;
+}
+
+.delivery-status-horizontal-line {
+  width: 200px;
+  height: 3px;
+  border-radius: 1.5px;
+}
+
+.delivery-status-order-point {
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.1rem;
+  align-items: center;
+}
+
+.delivery-bus {
+  height: 20px;
+  width: auto;
+  color: blue;
+}
+
+.delivery-status-point-default {
+  color: grey;
+  border: 3px solid blue;
+  border-radius: 51%;
+  padding: 0;
+}
+
+.delivery-status-default-line {
+  background-color: grey;
+}
+
+/* Order Details Styling */
+
+.order-details {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.order-detail {
+  font-size: 16px; /* Font size for readability */
+  color: #333; /* Dark text color for contrast */
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-total-price {
+  font-weight: bold;
+  font-size: 18px;
+  color: #d32f2f;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 850px) {
+  .order-histroy-table-container table th,
+  .order-histroy-table-container table td {
+      font-size: 14px;
+      padding: 0.3rem;
+  }
+
+  .cart-quantity-btn {
+      height: auto;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .order-histroy-table-container table th {
+      font-size: 13px;
+      padding: 0.2rem;
+  }
+  .order-histroy-table-container table td {
+      font-size: 13px;
+      padding: 0.2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .order-details {
+      padding: 8px;
+  }
+
+  .order-details span {
+      display: block;
+      font-size: 14px; /* Adjust the font size */
+      margin-bottom: 5px;
+  }
+
+  .order-details .total-price {
+      font-size: 16px;
+      margin-top: 10px;
+      color: #d9534f; /* Ensure the color contrast is good */
+  }
+
+  .order-details .status {
+      font-size: 14px;
+      margin-top: 5px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .order-histroy-table-container table th {
+      font-size: 12px;
+      padding: 0.2rem;
+  }
+  .order-histroy-table-container table td {
+      font-size: 12px;
+      padding: 0.2rem;
+  }
+
+  .delivery-status-order-history{
+    flex-direction: column;
+  }
+
+  .delivery-status-horizontal-line {
+    width: 3px;
+    height: 50px;
+    border-radius: 1.5px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .order-histroy-table-container table th {
+      font-size: 11px;
+      padding: 0.05rem;
+  }
+  .order-histroy-table-container table td {
+      font-size: 11px;
+      padding: 0.1rem;
+  }
+}
+
+
+
+@media screen and (max-width: 400px) {
+  .order-histroy-table-container table th,
+  .order-histroy-table-container table td {
+      font-size: 10px;
+      padding: 2px;
+  }
+}

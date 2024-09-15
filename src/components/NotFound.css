@@ -1,0 +1,60 @@
+.page-not-found-main-container {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255,255,255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    gap: 1rem;
+}
+
+.page-not-found-main-container img {
+    width: 500px;
+    height: auto;
+}
+
+.page-not-found-main-container button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    color: whitesmoke;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.page-not-found-main-container button:hover {
+    background: linear-gradient(90deg, rgba(0, 212, 255, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(2, 0, 36, 1) 100%);
+    ;
+}
+
+.page-not-found-main-container .loader{
+    width: 100px;
+    height: 30px;
+    aspect-ratio: 2;
+    border: 6px solid #fff;
+    box-sizing: border-box;
+    background:
+        radial-gradient(farthest-side, rgb(9, 9, 121) 98%, #fff) left/20px 20px,
+        radial-gradient(farthest-side, rgb(9, 9, 121) 98%, #fff) left/20px 20px,
+        radial-gradient(farthest-side, rgb(9, 9, 121) 98%, #fff) center/20px 20px,
+        radial-gradient(farthest-side, rgb(9, 9, 121) 98%, #fff) right/20px 20px,
+        #fff;
+    background-repeat: no-repeat;
+    filter: blur(4px) contrast(10);
+    animation: l14 1s infinite;
+    color: rgb(9, 9, 121);
+}
+
+@keyframes l14 {
+    100% {
+        background-position: right, left, center, right
+    }
+}
